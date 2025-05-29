@@ -2,6 +2,11 @@ import { Ionicons } from '@expo/vector-icons';
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { PieChart } from 'react-native-chart-kit';
+import DishStatistics from './DishStatistics'; // adapte le chemin selon ton dossier
+
+// Puis dans le JSX de ta Home Page :
+
+
 
 
 export default function HomeScreen() {
@@ -177,6 +182,7 @@ export default function HomeScreen() {
           </View>
         </View>
       </View>
+      <DishStatistics />
 
       <View style={styles.bottomNav}>
         <View style={styles.navItem}>
@@ -193,7 +199,7 @@ export default function HomeScreen() {
         </View>
         <View style={styles.navItem}>
           <Ionicons name="pie-chart-outline" size={25} color="green" />
-          <Text style={styles.navText}>Insights</Text>
+          <Text style={{color: 'green'}}>Insights</Text>
         </View>
         <View style={styles.navItem}>
           <Ionicons name="person-circle-outline" size={25} color="grey" />
@@ -382,5 +388,6 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     marginRight: 8,
   },
+  
   
 }); 
